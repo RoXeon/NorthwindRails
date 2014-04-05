@@ -1,0 +1,31 @@
+<h1>Listing shippers_tmps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shipperid</th>
+      <th>Companyname</th>
+      <th>Phone</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shippers_tmps.each do |shippers_tmp| %>
+      <tr>
+        <td><%= shippers_tmp.ShipperID %></td>
+        <td><%= shippers_tmp.CompanyName %></td>
+        <td><%= shippers_tmp.Phone %></td>
+        <td><%= link_to 'Show', shippers_tmp %></td>
+        <td><%= link_to 'Edit', edit_shippers_tmp_path(shippers_tmp) %></td>
+        <td><%= link_to 'Destroy', shippers_tmp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shippers tmp', new_shippers_tmp_path %>

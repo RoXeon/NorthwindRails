@@ -1,0 +1,1 @@
+json.extract! @order, :id, :OrderID, :CustomerID, :EmployeeID, :OrderDate, :RequiredDate, :ShippedDate, :ShipVia, :Freight, :ShipName, :ShipAddress, :ShipCity, :ShipRegion, :ShipPostalCode, :ShipCountry, :created_at, :updated_at

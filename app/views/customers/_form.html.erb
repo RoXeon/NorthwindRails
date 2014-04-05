@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :CustomerID %><br>
+    <%= f.text_field :CustomerID %>
+  </div>
+  <div class="field">
     <%= f.label :CompanyName %><br>
     <%= f.text_field :CompanyName %>
   </div>
@@ -22,6 +26,34 @@
   <div class="field">
     <%= f.label :ContactTitle %><br>
     <%= f.text_field :ContactTitle %>
+  </div>
+  <div class="field">
+    <%= f.label :Address %><br>
+    <%= f.text_field :Address %>
+  </div>
+  <div class="field">
+    <%= f.label :City %><br>
+    <%= f.text_field :City %>
+  </div>
+  <div class="field">
+    <%= f.label :Region %><br>
+    <%= f.text_field :Region %>
+  </div>
+  <div class="field">
+    <%= f.label :PostalCode %><br>
+    <%= f.text_field :PostalCode %>
+  </div>
+  <div class="field">
+    <%= f.label :Country %><br>
+    <%= f.text_field :Country %>
+  </div>
+  <div class="field">
+    <%= f.label :Phone %><br>
+    <%= f.text_field :Phone %>
+  </div>
+  <div class="field">
+    <%= f.label :Fax %><br>
+    <%= f.text_field :Fax %>
   </div>
   <div class="actions">
     <%= f.submit %>

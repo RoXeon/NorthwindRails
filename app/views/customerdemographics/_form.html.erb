@@ -1,0 +1,25 @@
+<%= form_for(@customerdemographic) do |f| %>
+  <% if @customerdemographic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@customerdemographic.errors.count, "error") %> prohibited this customerdemographic from being saved:</h2>
+
+      <ul>
+      <% @customerdemographic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :CustomerTypeID %><br>
+    <%= f.text_field :CustomerTypeID %>
+  </div>
+  <div class="field">
+    <%= f.label :CustomerDesc %><br>
+    <%= f.text_area :CustomerDesc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

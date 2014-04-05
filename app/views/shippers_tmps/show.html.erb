@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shipperid:</strong>
+  <%= @shippers_tmp.ShipperID %>
+</p>
+
+<p>
+  <strong>Companyname:</strong>
+  <%= @shippers_tmp.CompanyName %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @shippers_tmp.Phone %>
+</p>
+
+<%= link_to 'Edit', edit_shippers_tmp_path(@shippers_tmp) %> |
+<%= link_to 'Back', shippers_tmps_path %>

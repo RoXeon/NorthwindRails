@@ -18,7 +18,7 @@ class CustomersControllerTest < ActionController::TestCase
 
   test "should create customer" do
     assert_difference('Customer.count') do
-      post :create, customer: { CompanyName: @customer.CompanyName, ContactName: @customer.ContactName, ContactTitle: @customer.ContactTitle }
+      post :create, customer: { Address: @customer.Address, City: @customer.City, CompanyName: @customer.CompanyName, ContactName: @customer.ContactName, ContactTitle: @customer.ContactTitle, Country: @customer.Country, CustomerID: @customer.CustomerID, Fax: @customer.Fax, Phone: @customer.Phone, PostalCode: @customer.PostalCode, Region: @customer.Region }
     end
 
     assert_redirected_to customer_path(assigns(:customer))
@@ -35,7 +35,7 @@ class CustomersControllerTest < ActionController::TestCase
   end
 
   test "should update customer" do
-    patch :update, id: @customer, customer: { CompanyName: @customer.CompanyName, ContactName: @customer.ContactName, ContactTitle: @customer.ContactTitle }
+    patch :update, id: @customer, customer: { Address: @customer.Address, City: @customer.City, CompanyName: @customer.CompanyName, ContactName: @customer.ContactName, ContactTitle: @customer.ContactTitle, Country: @customer.Country, CustomerID: @customer.CustomerID, Fax: @customer.Fax, Phone: @customer.Phone, PostalCode: @customer.PostalCode, Region: @customer.Region }
     assert_redirected_to customer_path(assigns(:customer))
   end
 

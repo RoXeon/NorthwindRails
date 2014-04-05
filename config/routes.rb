@@ -1,4 +1,32 @@
 NorthwindRails::Application.routes.draw do
+  resources :usstates
+
+  resources :territories
+
+  resources :suppliers
+
+  resources :shippers_tmps
+
+  resources :shippers
+
+  resources :regions
+
+  resources :products
+
+  resources :orders
+
+  resources :order_details
+
+  resources :employeeterritories
+
+  resources :employees
+
+  resources :customerdemographics
+
+  resources :customercustomerdemos
+
+  resources :categories
+
   resources :customers
   root 'customers#index'
 

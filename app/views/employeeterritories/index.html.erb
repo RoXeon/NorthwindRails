@@ -1,0 +1,29 @@
+<h1>Listing employeeterritories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Employeeid</th>
+      <th>Territoryid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employeeterritories.each do |employeeterritory| %>
+      <tr>
+        <td><%= employeeterritory.EmployeeID %></td>
+        <td><%= employeeterritory.TerritoryID %></td>
+        <td><%= link_to 'Show', employeeterritory %></td>
+        <td><%= link_to 'Edit', edit_employeeterritory_path(employeeterritory) %></td>
+        <td><%= link_to 'Destroy', employeeterritory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Employeeterritory', new_employeeterritory_path %>

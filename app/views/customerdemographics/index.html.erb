@@ -1,0 +1,29 @@
+<h1>Listing customerdemographics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customertypeid</th>
+      <th>Customerdesc</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customerdemographics.each do |customerdemographic| %>
+      <tr>
+        <td><%= customerdemographic.CustomerTypeID %></td>
+        <td><%= customerdemographic.CustomerDesc %></td>
+        <td><%= link_to 'Show', customerdemographic %></td>
+        <td><%= link_to 'Edit', edit_customerdemographic_path(customerdemographic) %></td>
+        <td><%= link_to 'Destroy', customerdemographic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customerdemographic', new_customerdemographic_path %>
