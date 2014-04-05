@@ -13,10 +13,19 @@ Assuming you have ruby installed:
 
 ### Update/Install all bundles
      bundle install
-
      bundle update
+
+### Sync DB structure
+
+     bundle exec rake db:migrate
 
 ### Start server
 
-     ./bin/rails s
+     bundle exec rails server
+
+
+DBMS configuration
+------------------
+
+config/database.yml speaks for itself :)
 
