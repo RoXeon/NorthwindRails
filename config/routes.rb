@@ -1,5 +1,5 @@
 NorthwindRails::Application.routes.draw do
-  resources :usstates
+  resources :us_states
 
   resources :territories
 
@@ -17,18 +17,18 @@ NorthwindRails::Application.routes.draw do
 
   resources :order_details
 
-  resources :employeeterritories
+  resources :employee_territories
 
   resources :employees
 
-  resources :customerdemographics
+  resources :customer_demographics
 
-  resources :customercustomerdemos
+  resources :customer_customer_demos
 
   resources :categories
 
   resources :customers
-  root 'customers#index'
+  root 'application#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

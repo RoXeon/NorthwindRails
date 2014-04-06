@@ -1,0 +1,33 @@
+<%= form_for(@us_state) do |f| %>
+  <% if @us_state.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@us_state.errors.count, "error") %> prohibited this us_state from being saved:</h2>
+
+      <ul>
+      <% @us_state.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :StateID %><br>
+    <%= f.number_field :StateID %>
+  </div>
+  <div class="field">
+    <%= f.label :StateName %><br>
+    <%= f.text_field :StateName %>
+  </div>
+  <div class="field">
+    <%= f.label :StateAbbr %><br>
+    <%= f.text_field :StateAbbr %>
+  </div>
+  <div class="field">
+    <%= f.label :StateRegion %><br>
+    <%= f.text_field :StateRegion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140405230220) do
+ActiveRecord::Schema.define(version: 20140406001703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,20 @@ ActiveRecord::Schema.define(version: 20140405230220) do
     t.string   "CategoryName"
     t.text     "Description"
     t.binary   "Picture"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customer_customer_demos", force: true do |t|
+    t.string   "CustomerID"
+    t.string   "CustomerTypeID"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customer_demographics", force: true do |t|
+    t.string   "CustomerTypeID"
+    t.text     "CustomerDesc"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -51,6 +65,13 @@ ActiveRecord::Schema.define(version: 20140405230220) do
     t.string   "Country"
     t.string   "Phone"
     t.string   "Fax"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "employee_territories", force: true do |t|
+    t.integer  "EmployeeID"
+    t.string   "TerritoryID"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -173,6 +194,15 @@ ActiveRecord::Schema.define(version: 20140405230220) do
     t.string   "TerritoryID"
     t.string   "TerritoryDescription"
     t.integer  "RegionID"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "us_states", force: true do |t|
+    t.integer  "StateID"
+    t.string   "StateName"
+    t.string   "StateAbbr"
+    t.string   "StateRegion"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class CustomercustomerdemosControllerTest < ActionController::TestCase
+class CustomerCustomerDemosControllerTest < ActionController::TestCase
   setup do
-    @customer_customer_demo = customercustomerdemos(:one)
+    @customer_customer_demo = customer_customer_demos(:one)
   end
 
   test "should get index" do
@@ -21,7 +21,7 @@ class CustomercustomerdemosControllerTest < ActionController::TestCase
       post :create, customer_customer_demo: { CustomerID: @customer_customer_demo.CustomerID, CustomerTypeID: @customer_customer_demo.CustomerTypeID }
     end
 
-    assert_redirected_to customercustomerdemo_path(assigns(:customer_customer_demo))
+    assert_redirected_to customer_customer_demo_path(assigns(:customer_customer_demo))
   end
 
   test "should show customer_customer_demo" do
@@ -36,7 +36,7 @@ class CustomercustomerdemosControllerTest < ActionController::TestCase
 
   test "should update customer_customer_demo" do
     patch :update, id: @customer_customer_demo, customer_customer_demo: { CustomerID: @customer_customer_demo.CustomerID, CustomerTypeID: @customer_customer_demo.CustomerTypeID }
-    assert_redirected_to customercustomerdemo_path(assigns(:customer_customer_demo))
+    assert_redirected_to customer_customer_demo_path(assigns(:customer_customer_demo))
   end
 
   test "should destroy customer_customer_demo" do
@@ -44,6 +44,6 @@ class CustomercustomerdemosControllerTest < ActionController::TestCase
       delete :destroy, id: @customer_customer_demo
     end
 
-    assert_redirected_to customercustomerdemos_path
+    assert_redirected_to customer_customer_demos_path
   end
 end

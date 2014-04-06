@@ -23,12 +23,12 @@ ActiveRecord::Schema.define(version: 0) do
     t.binary  "Picture"
   end
 
-  create_table "customercustomerdemo", id: false, force: true do |t|
+  create_table "customer_customer_demo", id: false, force: true do |t|
     t.string "CustomerID",     limit: nil, null: false
     t.string "CustomerTypeID", limit: nil, null: false
   end
 
-  create_table "customerdemographics", id: false, force: true do |t|
+  create_table "CustomerDemographics", id: false, force: true do |t|
     t.string "CustomerTypeID", limit: nil, null: false
     t.text   "CustomerDesc"
   end
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "PhotoPath"
   end
 
-  create_table "employeeterritories", id: false, force: true do |t|
+  create_table "EmployeeTerritories", id: false, force: true do |t|
     t.integer "EmployeeID",  limit: 2,  null: false
     t.string  "TerritoryID", limit: 20, null: false
   end
@@ -149,7 +149,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "RegionID",             limit: 2,   null: false
   end
 
-  create_table "usstates", id: false, force: true do |t|
+  create_table "UsStates", id: false, force: true do |t|
     t.integer "StateID",     limit: 2,   null: false
     t.string  "StateName",   limit: 100
     t.string  "StateAbbr",   limit: 2

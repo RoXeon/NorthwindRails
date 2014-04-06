@@ -1,0 +1,33 @@
+<h1>Listing us_states</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stateid</th>
+      <th>Statename</th>
+      <th>Stateabbr</th>
+      <th>Stateregion</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @us_states.each do |us_state| %>
+      <tr>
+        <td><%= us_state.StateID %></td>
+        <td><%= us_state.StateName %></td>
+        <td><%= us_state.StateAbbr %></td>
+        <td><%= us_state.StateRegion %></td>
+        <td><%= link_to 'Show', us_state %></td>
+        <td><%= link_to 'Edit', edit_us_state_path(us_state) %></td>
+        <td><%= link_to 'Destroy', us_state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Us state', new_us_state_path %>

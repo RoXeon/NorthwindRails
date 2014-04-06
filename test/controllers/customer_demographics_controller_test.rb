@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class CustomerdemographicsControllerTest < ActionController::TestCase
+class CustomerDemographicsControllerTest < ActionController::TestCase
   setup do
-    @customer_demographic = customerdemographics(:one)
+    @customer_demographic = customer_demographics(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:CustomerDemographics)
+    assert_not_nil assigns(:customer_demographics)
   end
 
   test "should get new" do
@@ -21,7 +21,7 @@ class CustomerdemographicsControllerTest < ActionController::TestCase
       post :create, customer_demographic: { CustomerDesc: @customer_demographic.CustomerDesc, CustomerTypeID: @customer_demographic.CustomerTypeID }
     end
 
-    assert_redirected_to customerdemographic_path(assigns(:customer_demographic))
+    assert_redirected_to customer_demographic_path(assigns(:customer_demographic))
   end
 
   test "should show customer_demographic" do
@@ -36,7 +36,7 @@ class CustomerdemographicsControllerTest < ActionController::TestCase
 
   test "should update customer_demographic" do
     patch :update, id: @customer_demographic, customer_demographic: { CustomerDesc: @customer_demographic.CustomerDesc, CustomerTypeID: @customer_demographic.CustomerTypeID }
-    assert_redirected_to customerdemographic_path(assigns(:customer_demographic))
+    assert_redirected_to customer_demographic_path(assigns(:customer_demographic))
   end
 
   test "should destroy customer_demographic" do
@@ -44,6 +44,6 @@ class CustomerdemographicsControllerTest < ActionController::TestCase
       delete :destroy, id: @customer_demographic
     end
 
-    assert_redirected_to customerdemographics_path
+    assert_redirected_to customer_demographics_path
   end
 end

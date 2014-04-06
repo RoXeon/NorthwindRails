@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class UsstatesControllerTest < ActionController::TestCase
+class UsStatesControllerTest < ActionController::TestCase
   setup do
-    @us_state = usstates(:one)
+    @us_state = us_states(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:UsStates)
+    assert_not_nil assigns(:us_states)
   end
 
   test "should get new" do
@@ -21,7 +21,7 @@ class UsstatesControllerTest < ActionController::TestCase
       post :create, us_state: { StateAbbr: @us_state.StateAbbr, StateID: @us_state.StateID, StateName: @us_state.StateName, StateRegion: @us_state.StateRegion }
     end
 
-    assert_redirected_to usstate_path(assigns(:us_state))
+    assert_redirected_to us_state_path(assigns(:us_state))
   end
 
   test "should show us_state" do
@@ -36,7 +36,7 @@ class UsstatesControllerTest < ActionController::TestCase
 
   test "should update us_state" do
     patch :update, id: @us_state, us_state: { StateAbbr: @us_state.StateAbbr, StateID: @us_state.StateID, StateName: @us_state.StateName, StateRegion: @us_state.StateRegion }
-    assert_redirected_to usstate_path(assigns(:us_state))
+    assert_redirected_to us_state_path(assigns(:us_state))
   end
 
   test "should destroy us_state" do
@@ -44,6 +44,6 @@ class UsstatesControllerTest < ActionController::TestCase
       delete :destroy, id: @us_state
     end
 
-    assert_redirected_to usstates_path
+    assert_redirected_to us_states_path
   end
 end

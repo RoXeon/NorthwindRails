@@ -1,0 +1,7 @@
+<h1>Northwind Database</h1>
+
+<ol>
+    <% @models.each do |model| %>
+        <li><%= link_to model, eval(model.to_s  + '_path') %></li>
+    <% end %>
+</ol>
