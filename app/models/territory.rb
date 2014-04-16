@@ -1,4 +1,6 @@
 class Territory < ActiveRecord::Base
+  self.primary_key = "TerritoryID"
+
   # Not null
   validates :TerritoryID, presence: true, uniqueness: true
   validates :TerritoryDescription, presence: true
