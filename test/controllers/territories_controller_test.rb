@@ -18,7 +18,7 @@ class TerritoriesControllerTest < ActionController::TestCase
 
   test "should create territory" do
     assert_difference('Territory.count') do
-      post :create, territory: { RegionID: @territory.RegionID, TerritoryDescription: @territory.TerritoryDescription, TerritoryID: @territory.TerritoryID }
+      post :create, territory: { TerritoryDescription: @territory.TerritoryDescription, id: @territory.id, region_id: @territory.region_id }
     end
 
     assert_redirected_to territory_path(assigns(:territory))
@@ -35,7 +35,7 @@ class TerritoriesControllerTest < ActionController::TestCase
   end
 
   test "should update territory" do
-    patch :update, id: @territory, territory: { RegionID: @territory.RegionID, TerritoryDescription: @territory.TerritoryDescription, TerritoryID: @territory.TerritoryID }
+    patch :update, id: @territory, territory: { TerritoryDescription: @territory.TerritoryDescription, id: @territory.id, region_id: @territory.region_id }
     assert_redirected_to territory_path(assigns(:territory))
   end
 

@@ -1,12 +1,9 @@
 class Territory < ActiveRecord::Base
-  self.primary_key = "TerritoryID"
-
   # Not null
-  validates :TerritoryID, presence: true, uniqueness: true
   validates :TerritoryDescription, presence: true
-  validates :RegionID, presence: true
+  validates :region_id, presence: true
 
 
-  belongs_to :region, class_name: "Region", foreign_key: "RegionID", inverse_of: :territories
+  belongs_to :region, inverse_of: :territories
   validates :region, presence: true
 end

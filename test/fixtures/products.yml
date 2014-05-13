@@ -1,10 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ProductID: 1
+  id: 1
   ProductName: MyString
-  SupplierID: 1
-  CategoryID: 1
+  supplier_id: 1
+  category_id: 1
   QuantityPerUnit: MyString
   UnitPrice: 1.5
   UnitsInStock: 1
@@ -13,10 +13,10 @@ one:
   Discontinued: 1
 
 two:
-  ProductID: 1
+  id: 1
   ProductName: MyString
-  SupplierID: 1
-  CategoryID: 1
+  supplier_id: 1
+  category_id: 1
   QuantityPerUnit: MyString
   UnitPrice: 1.5
   UnitsInStock: 1

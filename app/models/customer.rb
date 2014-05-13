@@ -1,8 +1,6 @@
 class Customer < ActiveRecord::Base
-  self.primary_key = "CustomerID"
 
   # Not null
-  validates :CustomerID, presence: true
   validates :CompanyName, presence: true
 
   # Limit

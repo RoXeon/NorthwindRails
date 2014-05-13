@@ -69,6 +69,6 @@ class UsStatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def us_state_params
-      params.require(:us_state).permit(:StateID, :StateName, :StateAbbr, :StateRegion)
+      params.require(:us_state).permit(:id, :StateName, :StateAbbr, :StateRegion)
     end
 end

@@ -18,7 +18,7 @@ class SuppliersControllerTest < ActionController::TestCase
 
   test "should create supplier" do
     assert_difference('Supplier.count') do
-      post :create, supplier: { Address: @supplier.Address, City: @supplier.City, CompanyName: @supplier.CompanyName, ContactName: @supplier.ContactName, ContactTitle: @supplier.ContactTitle, Country: @supplier.Country, Fax: @supplier.Fax, HomePage: @supplier.HomePage, Phone: @supplier.Phone, PostalCode: @supplier.PostalCode, Region: @supplier.Region, SupplierID: @supplier.SupplierID }
+      post :create, supplier: { Address: @supplier.Address, City: @supplier.City, CompanyName: @supplier.CompanyName, ContactName: @supplier.ContactName, ContactTitle: @supplier.ContactTitle, Country: @supplier.Country, Fax: @supplier.Fax, HomePage: @supplier.HomePage, Phone: @supplier.Phone, PostalCode: @supplier.PostalCode, Region: @supplier.Region, id: @supplier.id }
     end
 
     assert_redirected_to supplier_path(assigns(:supplier))
@@ -35,7 +35,7 @@ class SuppliersControllerTest < ActionController::TestCase
   end
 
   test "should update supplier" do
-    patch :update, id: @supplier, supplier: { Address: @supplier.Address, City: @supplier.City, CompanyName: @supplier.CompanyName, ContactName: @supplier.ContactName, ContactTitle: @supplier.ContactTitle, Country: @supplier.Country, Fax: @supplier.Fax, HomePage: @supplier.HomePage, Phone: @supplier.Phone, PostalCode: @supplier.PostalCode, Region: @supplier.Region, SupplierID: @supplier.SupplierID }
+    patch :update, id: @supplier, supplier: { Address: @supplier.Address, City: @supplier.City, CompanyName: @supplier.CompanyName, ContactName: @supplier.ContactName, ContactTitle: @supplier.ContactTitle, Country: @supplier.Country, Fax: @supplier.Fax, HomePage: @supplier.HomePage, Phone: @supplier.Phone, PostalCode: @supplier.PostalCode, Region: @supplier.Region, id: @supplier.id }
     assert_redirected_to supplier_path(assigns(:supplier))
   end
 

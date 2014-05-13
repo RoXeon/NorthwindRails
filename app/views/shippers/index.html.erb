@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Shipperid</th>
+      <th>Id</th>
       <th>Companyname</th>
       <th>Phone</th>
       <th></th>
@@ -15,7 +15,7 @@
   <tbody>
     <% @shippers.each do |shipper| %>
       <tr>
-        <td><%= shipper.ShipperID %></td>
+        <td><%= shipper.id %></td>
         <td><%= shipper.CompanyName %></td>
         <td><%= shipper.Phone %></td>
         <td><%= link_to 'Show', shipper %></td>

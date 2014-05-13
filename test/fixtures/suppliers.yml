@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  SupplierID: 1
+  id: 1
   CompanyName: MyString
   ContactName: MyString
   ContactTitle: MyString
@@ -15,7 +15,7 @@ one:
   HomePage: MyText
 
 two:
-  SupplierID: 1
+  id: 1
   CompanyName: MyString
   ContactName: MyString
   ContactTitle: MyString

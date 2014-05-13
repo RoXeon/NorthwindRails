@@ -3,9 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Orderid</th>
-      <th>Customerid</th>
-      <th>Employeeid</th>
+      <th>Id</th>
+      <th>Customer</th>
+      <th>Employee</th>
       <th>Orderdate</th>
       <th>Requireddate</th>
       <th>Shippeddate</th>
@@ -26,9 +26,9 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <td><%= order.OrderID %></td>
-        <td><%= order.CustomerID %></td>
-        <td><%= order.EmployeeID %></td>
+        <td><%= order.id %></td>
+        <td><%= order.customer_id %></td>
+        <td><%= order.employee_id %></td>
         <td><%= order.OrderDate %></td>
         <td><%= order.RequiredDate %></td>
         <td><%= order.ShippedDate %></td>

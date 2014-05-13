@@ -69,6 +69,6 @@ class EmployeeTerritoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_territory_params
-      params.require(:employee_territory).permit(:EmployeeID, :TerritoryID)
+      params.require(:employee_territory).permit(:employee_id, :territory_id)
     end
 end

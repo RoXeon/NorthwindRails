@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Employeeid</th>
+      <th>Id</th>
       <th>Lastname</th>
       <th>Firstname</th>
       <th>Title</th>
@@ -30,7 +30,7 @@
   <tbody>
     <% @employees.each do |employee| %>
       <tr>
-        <td><%= employee.EmployeeID %></td>
+        <td><%= employee.id %></td>
         <td><%= employee.LastName %></td>
         <td><%= employee.FirstName %></td>
         <td><%= employee.Title %></td>

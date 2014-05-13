@@ -69,6 +69,6 @@ class CustomerDemographicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_demographic_params
-      params.require(:customer_demographic).permit(:CustomerTypeID, :CustomerDesc)
+      params.require(:customer_demographic).permit(:id, :CustomerDesc)
     end
 end

@@ -69,6 +69,6 @@ class TerritoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def territory_params
-      params.require(:territory).permit(:TerritoryID, :TerritoryDescription, :RegionID)
+      params.require(:territory).permit(:id, :TerritoryDescription, :region_id)
     end
 end

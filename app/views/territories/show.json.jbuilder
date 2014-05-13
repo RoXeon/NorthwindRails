@@ -1,1 +1,1 @@
-json.extract! @territory, :id, :TerritoryID, :TerritoryDescription, :RegionID, :created_at, :updated_at
+json.extract! @territory, :id, :id, :TerritoryDescription, :region_id, :created_at, :updated_at

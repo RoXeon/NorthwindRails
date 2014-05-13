@@ -3,9 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Territoryid</th>
+      <th>Id</th>
       <th>Territorydescription</th>
-      <th>Regionid</th>
+      <th>Region</th>
       <th></th>
       <th></th>
       <th></th>
@@ -15,9 +15,9 @@
   <tbody>
     <% @territories.each do |territory| %>
       <tr>
-        <td><%= territory.TerritoryID %></td>
+        <td><%= territory.id %></td>
         <td><%= territory.TerritoryDescription %></td>
-        <td><%= territory.RegionID %></td>
+        <td><%= territory.region_id %></td>
         <td><%= link_to 'Show', territory %></td>
         <td><%= link_to 'Edit', edit_territory_path(territory) %></td>
         <td><%= link_to 'Destroy', territory, method: :delete, data: { confirm: 'Are you sure?' } %></td>

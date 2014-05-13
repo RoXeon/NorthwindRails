@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   enable_extension "plpgsql"
 
   create_table "categories", force: true do |t|
-    t.integer  "id"
     t.string   "CategoryName"
     t.text     "Description"
     t.binary   "Picture"
@@ -33,14 +32,12 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "customer_demographics", force: true do |t|
-    t.integer  "id"
     t.text     "CustomerDesc"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "customers", force: true do |t|
-    t.integer  "id"
     t.string   "CompanyName"
     t.string   "ContactName"
     t.string   "ContactTitle"
@@ -63,7 +60,6 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "employees", force: true do |t|
-    t.integer  "id"
     t.string   "LastName"
     t.string   "FirstName"
     t.string   "Title"
@@ -96,7 +92,6 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "orders", force: true do |t|
-    t.integer  "id"
     t.integer  "customer_id"
     t.integer  "employee_id"
     t.date     "OrderDate"
@@ -115,7 +110,6 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "products", force: true do |t|
-    t.integer  "id"
     t.string   "ProductName"
     t.integer  "supplier_id"
     t.integer  "category_id"
@@ -130,14 +124,12 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "regions", force: true do |t|
-    t.integer  "id"
     t.string   "RegionDescription"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "shippers", force: true do |t|
-    t.integer  "id"
     t.string   "CompanyName"
     t.string   "Phone"
     t.datetime "created_at"
@@ -153,7 +145,6 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "suppliers", force: true do |t|
-    t.integer  "id"
     t.string   "CompanyName"
     t.string   "ContactName"
     t.string   "ContactTitle"
@@ -170,7 +161,6 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "territories", force: true do |t|
-    t.string   "id"
     t.string   "TerritoryDescription"
     t.integer  "region_id"
     t.datetime "created_at"
@@ -178,7 +168,6 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "us_states", force: true do |t|
-    t.integer  "id"
     t.string   "StateName"
     t.string   "StateAbbr"
     t.string   "StateRegion"

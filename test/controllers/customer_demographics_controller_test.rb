@@ -18,7 +18,7 @@ class CustomerDemographicsControllerTest < ActionController::TestCase
 
   test "should create customer_demographic" do
     assert_difference('CustomerDemographic.count') do
-      post :create, customer_demographic: { CustomerDesc: @customer_demographic.CustomerDesc, CustomerTypeID: @customer_demographic.CustomerTypeID }
+      post :create, customer_demographic: { CustomerDesc: @customer_demographic.CustomerDesc, id: @customer_demographic.id }
     end
 
     assert_redirected_to customer_demographic_path(assigns(:customer_demographic))
@@ -35,7 +35,7 @@ class CustomerDemographicsControllerTest < ActionController::TestCase
   end
 
   test "should update customer_demographic" do
-    patch :update, id: @customer_demographic, customer_demographic: { CustomerDesc: @customer_demographic.CustomerDesc, CustomerTypeID: @customer_demographic.CustomerTypeID }
+    patch :update, id: @customer_demographic, customer_demographic: { CustomerDesc: @customer_demographic.CustomerDesc, id: @customer_demographic.id }
     assert_redirected_to customer_demographic_path(assigns(:customer_demographic))
   end
 

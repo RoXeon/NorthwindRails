@@ -18,7 +18,7 @@ class RegionsControllerTest < ActionController::TestCase
 
   test "should create region" do
     assert_difference('Region.count') do
-      post :create, region: { RegionDescription: @region.RegionDescription, RegionID: @region.RegionID }
+      post :create, region: { RegionDescription: @region.RegionDescription, id: @region.id }
     end
 
     assert_redirected_to region_path(assigns(:region))
@@ -35,7 +35,7 @@ class RegionsControllerTest < ActionController::TestCase
   end
 
   test "should update region" do
-    patch :update, id: @region, region: { RegionDescription: @region.RegionDescription, RegionID: @region.RegionID }
+    patch :update, id: @region, region: { RegionDescription: @region.RegionDescription, id: @region.id }
     assert_redirected_to region_path(assigns(:region))
   end
 

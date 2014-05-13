@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Regionid</th>
+      <th>Id</th>
       <th>Regiondescription</th>
       <th></th>
       <th></th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @regions.each do |region| %>
       <tr>
-        <td><%= region.RegionID %></td>
+        <td><%= region.id %></td>
         <td><%= region.RegionDescription %></td>
         <td><%= link_to 'Show', region %></td>
         <td><%= link_to 'Edit', edit_region_path(region) %></td>

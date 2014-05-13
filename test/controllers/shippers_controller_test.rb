@@ -18,7 +18,7 @@ class ShippersControllerTest < ActionController::TestCase
 
   test "should create shipper" do
     assert_difference('Shipper.count') do
-      post :create, shipper: { CompanyName: @shipper.CompanyName, Phone: @shipper.Phone, ShipperID: @shipper.ShipperID }
+      post :create, shipper: { CompanyName: @shipper.CompanyName, Phone: @shipper.Phone, id: @shipper.id }
     end
 
     assert_redirected_to shipper_path(assigns(:shipper))
@@ -35,7 +35,7 @@ class ShippersControllerTest < ActionController::TestCase
   end
 
   test "should update shipper" do
-    patch :update, id: @shipper, shipper: { CompanyName: @shipper.CompanyName, Phone: @shipper.Phone, ShipperID: @shipper.ShipperID }
+    patch :update, id: @shipper, shipper: { CompanyName: @shipper.CompanyName, Phone: @shipper.Phone, id: @shipper.id }
     assert_redirected_to shipper_path(assigns(:shipper))
   end
 

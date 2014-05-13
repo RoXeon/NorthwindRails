@@ -18,7 +18,7 @@ class ProductsControllerTest < ActionController::TestCase
 
   test "should create product" do
     assert_difference('Product.count') do
-      post :create, product: { CategoryID: @product.CategoryID, Discontinued: @product.Discontinued, ProductID: @product.ProductID, ProductName: @product.ProductName, QuantityPerUnit: @product.QuantityPerUnit, ReorderLevel: @product.ReorderLevel, SupplierID: @product.SupplierID, UnitPrice: @product.UnitPrice, UnitsInStock: @product.UnitsInStock, UnitsOnOrder: @product.UnitsOnOrder }
+      post :create, product: { Discontinued: @product.Discontinued, ProductName: @product.ProductName, QuantityPerUnit: @product.QuantityPerUnit, ReorderLevel: @product.ReorderLevel, UnitPrice: @product.UnitPrice, UnitsInStock: @product.UnitsInStock, UnitsOnOrder: @product.UnitsOnOrder, category_id: @product.category_id, id: @product.id, supplier_id: @product.supplier_id }
     end
 
     assert_redirected_to product_path(assigns(:product))
@@ -35,7 +35,7 @@ class ProductsControllerTest < ActionController::TestCase
   end
 
   test "should update product" do
-    patch :update, id: @product, product: { CategoryID: @product.CategoryID, Discontinued: @product.Discontinued, ProductID: @product.ProductID, ProductName: @product.ProductName, QuantityPerUnit: @product.QuantityPerUnit, ReorderLevel: @product.ReorderLevel, SupplierID: @product.SupplierID, UnitPrice: @product.UnitPrice, UnitsInStock: @product.UnitsInStock, UnitsOnOrder: @product.UnitsOnOrder }
+    patch :update, id: @product, product: { Discontinued: @product.Discontinued, ProductName: @product.ProductName, QuantityPerUnit: @product.QuantityPerUnit, ReorderLevel: @product.ReorderLevel, UnitPrice: @product.UnitPrice, UnitsInStock: @product.UnitsInStock, UnitsOnOrder: @product.UnitsOnOrder, category_id: @product.category_id, id: @product.id, supplier_id: @product.supplier_id }
     assert_redirected_to product_path(assigns(:product))
   end
 

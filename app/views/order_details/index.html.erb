@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Orderid</th>
-      <th>Productid</th>
+      <th>Order</th>
+      <th>Product</th>
       <th>Unitprice</th>
       <th>Quantity</th>
       <th>Discount</th>
@@ -17,8 +17,8 @@
   <tbody>
     <% @order_details.each do |order_detail| %>
       <tr>
-        <td><%= order_detail.OrderID %></td>
-        <td><%= order_detail.ProductID %></td>
+        <td><%= order_detail.order_id %></td>
+        <td><%= order_detail.product_id %></td>
         <td><%= order_detail.UnitPrice %></td>
         <td><%= order_detail.Quantity %></td>
         <td><%= order_detail.Discount %></td>

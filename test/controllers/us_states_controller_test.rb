@@ -18,7 +18,7 @@ class UsStatesControllerTest < ActionController::TestCase
 
   test "should create us_state" do
     assert_difference('UsState.count') do
-      post :create, us_state: { StateAbbr: @us_state.StateAbbr, StateID: @us_state.StateID, StateName: @us_state.StateName, StateRegion: @us_state.StateRegion }
+      post :create, us_state: { StateAbbr: @us_state.StateAbbr, StateName: @us_state.StateName, StateRegion: @us_state.StateRegion, id: @us_state.id }
     end
 
     assert_redirected_to us_state_path(assigns(:us_state))
@@ -35,7 +35,7 @@ class UsStatesControllerTest < ActionController::TestCase
   end
 
   test "should update us_state" do
-    patch :update, id: @us_state, us_state: { StateAbbr: @us_state.StateAbbr, StateID: @us_state.StateID, StateName: @us_state.StateName, StateRegion: @us_state.StateRegion }
+    patch :update, id: @us_state, us_state: { StateAbbr: @us_state.StateAbbr, StateName: @us_state.StateName, StateRegion: @us_state.StateRegion, id: @us_state.id }
     assert_redirected_to us_state_path(assigns(:us_state))
   end
 

@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Customertypeid</th>
+      <th>Id</th>
       <th>Customerdesc</th>
       <th></th>
       <th></th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @customer_demographics.each do |customer_demographic| %>
       <tr>
-        <td><%= customer_demographic.CustomerTypeID %></td>
+        <td><%= customer_demographic.id %></td>
         <td><%= customer_demographic.CustomerDesc %></td>
         <td><%= link_to 'Show', customer_demographic %></td>
         <td><%= link_to 'Edit', edit_customer_demographic_path(customer_demographic) %></td>

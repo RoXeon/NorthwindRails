@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Customerid</th>
-      <th>Customertypeid</th>
+      <th>Customer</th>
+      <th>Customer demographic</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,8 +14,8 @@
   <tbody>
     <% @customer_customer_demos.each do |customer_customer_demo| %>
       <tr>
-        <td><%= customer_customer_demo.CustomerID %></td>
-        <td><%= customer_customer_demo.CustomerTypeID %></td>
+        <td><%= customer_customer_demo.customer_id %></td>
+        <td><%= customer_customer_demo.customer_demographic_id %></td>
         <td><%= link_to 'Show', customer_customer_demo %></td>
         <td><%= link_to 'Edit', edit_customer_customer_demo_path(customer_customer_demo) %></td>
         <td><%= link_to 'Destroy', customer_customer_demo, method: :delete, data: { confirm: 'Are you sure?' } %></td>

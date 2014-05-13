@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Customerid</th>
+      <th>Id</th>
       <th>Companyname</th>
       <th>Contactname</th>
       <th>Contacttitle</th>
@@ -23,7 +23,7 @@
   <tbody>
     <% @customers.each do |customer| %>
       <tr>
-        <td><%= customer.CustomerID %></td>
+        <td><%= customer.id %></td>
         <td><%= customer.CompanyName %></td>
         <td><%= customer.ContactName %></td>
         <td><%= customer.ContactTitle %></td>

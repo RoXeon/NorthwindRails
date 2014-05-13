@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  TerritoryID: MyString
+  id: MyString
   TerritoryDescription: MyString
-  RegionID: 1
+  region_id: 1
 
 two:
-  TerritoryID: MyString
+  id: MyString
   TerritoryDescription: MyString
-  RegionID: 1
+  region_id: 1

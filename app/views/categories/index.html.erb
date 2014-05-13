@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Categoryid</th>
+      <th>Id</th>
       <th>Categoryname</th>
       <th>Description</th>
       <th>Picture</th>
@@ -16,7 +16,7 @@
   <tbody>
     <% @categories.each do |category| %>
       <tr>
-        <td><%= category.CategoryID %></td>
+        <td><%= category.id %></td>
         <td><%= category.CategoryName %></td>
         <td><%= category.Description %></td>
         <td><%= category.Picture %></td>

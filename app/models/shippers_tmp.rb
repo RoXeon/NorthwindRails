@@ -1,5 +1,5 @@
 class ShippersTmp < ActiveRecord::Base
   # Not null
-  validates :ShipperID, presence: true
+  validates :shipper_id, presence: true
   validates :CompanyName, presence: true
 end

@@ -18,7 +18,7 @@ class OrderDetailsControllerTest < ActionController::TestCase
 
   test "should create order_detail" do
     assert_difference('OrderDetail.count') do
-      post :create, order_detail: { Discount: @order_detail.Discount, OrderID: @order_detail.OrderID, ProductID: @order_detail.ProductID, Quantity: @order_detail.Quantity, UnitPrice: @order_detail.UnitPrice }
+      post :create, order_detail: { Discount: @order_detail.Discount, Quantity: @order_detail.Quantity, UnitPrice: @order_detail.UnitPrice, order_id: @order_detail.order_id, product_id: @order_detail.product_id }
     end
 
     assert_redirected_to order_detail_path(assigns(:order_detail))
@@ -35,7 +35,7 @@ class OrderDetailsControllerTest < ActionController::TestCase
   end
 
   test "should update order_detail" do
-    patch :update, id: @order_detail, order_detail: { Discount: @order_detail.Discount, OrderID: @order_detail.OrderID, ProductID: @order_detail.ProductID, Quantity: @order_detail.Quantity, UnitPrice: @order_detail.UnitPrice }
+    patch :update, id: @order_detail, order_detail: { Discount: @order_detail.Discount, Quantity: @order_detail.Quantity, UnitPrice: @order_detail.UnitPrice, order_id: @order_detail.order_id, product_id: @order_detail.product_id }
     assert_redirected_to order_detail_path(assigns(:order_detail))
   end
 

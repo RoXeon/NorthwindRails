@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Stateid</th>
+      <th>Id</th>
       <th>Statename</th>
       <th>Stateabbr</th>
       <th>Stateregion</th>
@@ -16,7 +16,7 @@
   <tbody>
     <% @us_states.each do |us_state| %>
       <tr>
-        <td><%= us_state.StateID %></td>
+        <td><%= us_state.id %></td>
         <td><%= us_state.StateName %></td>
         <td><%= us_state.StateAbbr %></td>
         <td><%= us_state.StateRegion %></td>

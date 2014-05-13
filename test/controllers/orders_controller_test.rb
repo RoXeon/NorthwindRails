@@ -18,7 +18,7 @@ class OrdersControllerTest < ActionController::TestCase
 
   test "should create order" do
     assert_difference('Order.count') do
-      post :create, order: { CustomerID: @order.CustomerID, EmployeeID: @order.EmployeeID, Freight: @order.Freight, OrderDate: @order.OrderDate, OrderID: @order.OrderID, RequiredDate: @order.RequiredDate, ShipAddress: @order.ShipAddress, ShipCity: @order.ShipCity, ShipCountry: @order.ShipCountry, ShipName: @order.ShipName, ShipPostalCode: @order.ShipPostalCode, ShipRegion: @order.ShipRegion, ShipVia: @order.ShipVia, ShippedDate: @order.ShippedDate }
+      post :create, order: { Freight: @order.Freight, OrderDate: @order.OrderDate, RequiredDate: @order.RequiredDate, ShipAddress: @order.ShipAddress, ShipCity: @order.ShipCity, ShipCountry: @order.ShipCountry, ShipName: @order.ShipName, ShipPostalCode: @order.ShipPostalCode, ShipRegion: @order.ShipRegion, ShipVia: @order.ShipVia, ShippedDate: @order.ShippedDate, customer_id: @order.customer_id, employee_id: @order.employee_id, id: @order.id }
     end
 
     assert_redirected_to order_path(assigns(:order))
@@ -35,7 +35,7 @@ class OrdersControllerTest < ActionController::TestCase
   end
 
   test "should update order" do
-    patch :update, id: @order, order: { CustomerID: @order.CustomerID, EmployeeID: @order.EmployeeID, Freight: @order.Freight, OrderDate: @order.OrderDate, OrderID: @order.OrderID, RequiredDate: @order.RequiredDate, ShipAddress: @order.ShipAddress, ShipCity: @order.ShipCity, ShipCountry: @order.ShipCountry, ShipName: @order.ShipName, ShipPostalCode: @order.ShipPostalCode, ShipRegion: @order.ShipRegion, ShipVia: @order.ShipVia, ShippedDate: @order.ShippedDate }
+    patch :update, id: @order, order: { Freight: @order.Freight, OrderDate: @order.OrderDate, RequiredDate: @order.RequiredDate, ShipAddress: @order.ShipAddress, ShipCity: @order.ShipCity, ShipCountry: @order.ShipCountry, ShipName: @order.ShipName, ShipPostalCode: @order.ShipPostalCode, ShipRegion: @order.ShipRegion, ShipVia: @order.ShipVia, ShippedDate: @order.ShippedDate, customer_id: @order.customer_id, employee_id: @order.employee_id, id: @order.id }
     assert_redirected_to order_path(assigns(:order))
   end
 

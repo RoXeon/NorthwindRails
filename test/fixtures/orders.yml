@@ -1,12 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  OrderID: 1
-  CustomerID: MyString
-  EmployeeID: 1
-  OrderDate: 2014-04-06
-  RequiredDate: 2014-04-06
-  ShippedDate: 2014-04-06
+  id: 1
+  customer_id: 1
+  employee_id: 1
+  OrderDate: 2014-05-13
+  RequiredDate: 2014-05-13
+  ShippedDate: 2014-05-13
   ShipVia: 1
   Freight: 1.5
   ShipName: MyString
@@ -17,12 +17,12 @@ one:
   ShipCountry: MyString
 
 two:
-  OrderID: 1
-  CustomerID: MyString
-  EmployeeID: 1
-  OrderDate: 2014-04-06
-  RequiredDate: 2014-04-06
-  ShippedDate: 2014-04-06
+  id: 1
+  customer_id: 1
+  employee_id: 1
+  OrderDate: 2014-05-13
+  RequiredDate: 2014-05-13
+  ShippedDate: 2014-05-13
   ShipVia: 1
   Freight: 1.5
   ShipName: MyString

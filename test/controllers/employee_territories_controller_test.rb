@@ -18,7 +18,7 @@ class EmployeeTerritoriesControllerTest < ActionController::TestCase
 
   test "should create employee_territory" do
     assert_difference('EmployeeTerritory.count') do
-      post :create, employee_territory: { EmployeeID: @employee_territory.EmployeeID, TerritoryID: @employee_territory.TerritoryID }
+      post :create, employee_territory: { employee_id: @employee_territory.employee_id, territory_id: @employee_territory.territory_id }
     end
 
     assert_redirected_to employee_territory_path(assigns(:employee_territory))
@@ -35,7 +35,7 @@ class EmployeeTerritoriesControllerTest < ActionController::TestCase
   end
 
   test "should update employee_territory" do
-    patch :update, id: @employee_territory, employee_territory: { EmployeeID: @employee_territory.EmployeeID, TerritoryID: @employee_territory.TerritoryID }
+    patch :update, id: @employee_territory, employee_territory: { employee_id: @employee_territory.employee_id, territory_id: @employee_territory.territory_id }
     assert_redirected_to employee_territory_path(assigns(:employee_territory))
   end
 

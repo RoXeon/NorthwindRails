@@ -69,6 +69,6 @@ class ShippersTmpsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shippers_tmp_params
-      params.require(:shippers_tmp).permit(:ShipperID, :CompanyName, :Phone)
+      params.require(:shippers_tmp).permit(:shipper_id, :CompanyName, :Phone)
     end
 end

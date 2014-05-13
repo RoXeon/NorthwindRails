@@ -1,1 +1,1 @@
-json.extract! @customer_demographic, :id, :CustomerTypeID, :CustomerDesc, :created_at, :updated_at
+json.extract! @customer_demographic, :id, :id, :CustomerDesc, :created_at, :updated_at

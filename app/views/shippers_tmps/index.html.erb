@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Shipperid</th>
+      <th>Shipper</th>
       <th>Companyname</th>
       <th>Phone</th>
       <th></th>
@@ -15,7 +15,7 @@
   <tbody>
     <% @shippers_tmps.each do |shippers_tmp| %>
       <tr>
-        <td><%= shippers_tmp.ShipperID %></td>
+        <td><%= shippers_tmp.shipper_id %></td>
         <td><%= shippers_tmp.CompanyName %></td>
         <td><%= shippers_tmp.Phone %></td>
         <td><%= link_to 'Show', shippers_tmp %></td>

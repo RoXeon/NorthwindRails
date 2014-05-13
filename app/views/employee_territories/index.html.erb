@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Employeeid</th>
-      <th>Territoryid</th>
+      <th>Employee</th>
+      <th>Territory</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,8 +14,8 @@
   <tbody>
     <% @employee_territories.each do |employee_territory| %>
       <tr>
-        <td><%= employee_territory.EmployeeID %></td>
-        <td><%= employee_territory.TerritoryID %></td>
+        <td><%= employee_territory.employee_id %></td>
+        <td><%= employee_territory.territory_id %></td>
         <td><%= link_to 'Show', employee_territory %></td>
         <td><%= link_to 'Edit', edit_employee_territory_path(employee_territory) %></td>
         <td><%= link_to 'Destroy', employee_territory, method: :delete, data: { confirm: 'Are you sure?' } %></td>

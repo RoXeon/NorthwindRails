@@ -18,7 +18,7 @@ class EmployeesControllerTest < ActionController::TestCase
 
   test "should create employee" do
     assert_difference('Employee.count') do
-      post :create, employee: { Address: @employee.Address, BirthDate: @employee.BirthDate, City: @employee.City, Country: @employee.Country, EmployeeID: @employee.EmployeeID, Extension: @employee.Extension, FirstName: @employee.FirstName, HireDate: @employee.HireDate, HomePhone: @employee.HomePhone, LastName: @employee.LastName, Notes: @employee.Notes, Photo: @employee.Photo, PhotoPath: @employee.PhotoPath, PostalCode: @employee.PostalCode, Region: @employee.Region, ReportsTo: @employee.ReportsTo, Title: @employee.Title, TitleOfCourtesy: @employee.TitleOfCourtesy }
+      post :create, employee: { Address: @employee.Address, BirthDate: @employee.BirthDate, City: @employee.City, Country: @employee.Country, Extension: @employee.Extension, FirstName: @employee.FirstName, HireDate: @employee.HireDate, HomePhone: @employee.HomePhone, LastName: @employee.LastName, Notes: @employee.Notes, Photo: @employee.Photo, PhotoPath: @employee.PhotoPath, PostalCode: @employee.PostalCode, Region: @employee.Region, ReportsTo: @employee.ReportsTo, Title: @employee.Title, TitleOfCourtesy: @employee.TitleOfCourtesy, id: @employee.id }
     end
 
     assert_redirected_to employee_path(assigns(:employee))
@@ -35,7 +35,7 @@ class EmployeesControllerTest < ActionController::TestCase
   end
 
   test "should update employee" do
-    patch :update, id: @employee, employee: { Address: @employee.Address, BirthDate: @employee.BirthDate, City: @employee.City, Country: @employee.Country, EmployeeID: @employee.EmployeeID, Extension: @employee.Extension, FirstName: @employee.FirstName, HireDate: @employee.HireDate, HomePhone: @employee.HomePhone, LastName: @employee.LastName, Notes: @employee.Notes, Photo: @employee.Photo, PhotoPath: @employee.PhotoPath, PostalCode: @employee.PostalCode, Region: @employee.Region, ReportsTo: @employee.ReportsTo, Title: @employee.Title, TitleOfCourtesy: @employee.TitleOfCourtesy }
+    patch :update, id: @employee, employee: { Address: @employee.Address, BirthDate: @employee.BirthDate, City: @employee.City, Country: @employee.Country, Extension: @employee.Extension, FirstName: @employee.FirstName, HireDate: @employee.HireDate, HomePhone: @employee.HomePhone, LastName: @employee.LastName, Notes: @employee.Notes, Photo: @employee.Photo, PhotoPath: @employee.PhotoPath, PostalCode: @employee.PostalCode, Region: @employee.Region, ReportsTo: @employee.ReportsTo, Title: @employee.Title, TitleOfCourtesy: @employee.TitleOfCourtesy, id: @employee.id }
     assert_redirected_to employee_path(assigns(:employee))
   end
 

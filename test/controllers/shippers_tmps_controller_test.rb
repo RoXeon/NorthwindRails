@@ -18,7 +18,7 @@ class ShippersTmpsControllerTest < ActionController::TestCase
 
   test "should create shippers_tmp" do
     assert_difference('ShippersTmp.count') do
-      post :create, shippers_tmp: { CompanyName: @shippers_tmp.CompanyName, Phone: @shippers_tmp.Phone, ShipperID: @shippers_tmp.ShipperID }
+      post :create, shippers_tmp: { CompanyName: @shippers_tmp.CompanyName, Phone: @shippers_tmp.Phone, shipper_id: @shippers_tmp.shipper_id }
     end
 
     assert_redirected_to shippers_tmp_path(assigns(:shippers_tmp))
@@ -35,7 +35,7 @@ class ShippersTmpsControllerTest < ActionController::TestCase
   end
 
   test "should update shippers_tmp" do
-    patch :update, id: @shippers_tmp, shippers_tmp: { CompanyName: @shippers_tmp.CompanyName, Phone: @shippers_tmp.Phone, ShipperID: @shippers_tmp.ShipperID }
+    patch :update, id: @shippers_tmp, shippers_tmp: { CompanyName: @shippers_tmp.CompanyName, Phone: @shippers_tmp.Phone, shipper_id: @shippers_tmp.shipper_id }
     assert_redirected_to shippers_tmp_path(assigns(:shippers_tmp))
   end
 

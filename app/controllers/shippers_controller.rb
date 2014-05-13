@@ -69,6 +69,6 @@ class ShippersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shipper_params
-      params.require(:shipper).permit(:ShipperID, :CompanyName, :Phone)
+      params.require(:shipper).permit(:id, :CompanyName, :Phone)
     end
 end

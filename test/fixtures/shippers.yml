@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ShipperID: 1
+  id: 1
   CompanyName: MyString
   Phone: MyString
 
 two:
-  ShipperID: 1
+  id: 1
   CompanyName: MyString
   Phone: MyString
