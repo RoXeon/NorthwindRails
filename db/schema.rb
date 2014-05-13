@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   enable_extension "plpgsql"
 
   create_table "categories", force: true do |t|
-    t.integer  "CategoryID"
+    t.integer  "id"
     t.string   "CategoryName"
     t.text     "Description"
     t.binary   "Picture"
@@ -26,35 +26,21 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "customer_customer_demos", force: true do |t|
-    t.string   "CustomerID"
-    t.string   "CustomerTypeID"
+    t.integer  "customer_id"
+    t.string   "customer_demographic_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "customer_demographics", force: true do |t|
-    t.string   "CustomerTypeID"
-    t.text     "CustomerDesc"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "customercustomerdemos", force: true do |t|
-    t.string   "CustomerID"
-    t.string   "CustomerTypeID"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "customerdemographics", force: true do |t|
-    t.string   "CustomerTypeID"
+    t.integer  "id"
     t.text     "CustomerDesc"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "customers", force: true do |t|
-    t.string   "CustomerID"
+    t.integer  "id"
     t.string   "CompanyName"
     t.string   "ContactName"
     t.string   "ContactTitle"
@@ -70,14 +56,14 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "employee_territories", force: true do |t|
-    t.integer  "EmployeeID"
-    t.string   "TerritoryID"
+    t.integer  "employee_id"
+    t.integer  "territory_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "employees", force: true do |t|
-    t.integer  "EmployeeID"
+    t.integer  "id"
     t.string   "LastName"
     t.string   "FirstName"
     t.string   "Title"
@@ -99,16 +85,9 @@ ActiveRecord::Schema.define(version: 20140406001703) do
     t.datetime "updated_at"
   end
 
-  create_table "employeeterritories", force: true do |t|
-    t.integer  "EmployeeID"
-    t.string   "TerritoryID"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "order_details", force: true do |t|
-    t.integer  "OrderID"
-    t.integer  "ProductID"
+    t.integer  "order_id"
+    t.integer  "product_id"
     t.float    "UnitPrice"
     t.integer  "Quantity"
     t.float    "Discount"
@@ -117,9 +96,9 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "orders", force: true do |t|
-    t.integer  "OrderID"
-    t.string   "CustomerID"
-    t.integer  "EmployeeID"
+    t.integer  "id"
+    t.integer  "customer_id"
+    t.integer  "employee_id"
     t.date     "OrderDate"
     t.date     "RequiredDate"
     t.date     "ShippedDate"
@@ -136,10 +115,10 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "products", force: true do |t|
-    t.integer  "ProductID"
+    t.integer  "id"
     t.string   "ProductName"
-    t.integer  "SupplierID"
-    t.integer  "CategoryID"
+    t.integer  "supplier_id"
+    t.integer  "category_id"
     t.string   "QuantityPerUnit"
     t.float    "UnitPrice"
     t.integer  "UnitsInStock"
@@ -151,14 +130,14 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "regions", force: true do |t|
-    t.integer  "RegionID"
+    t.integer  "id"
     t.string   "RegionDescription"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "shippers", force: true do |t|
-    t.integer  "ShipperID"
+    t.integer  "id"
     t.string   "CompanyName"
     t.string   "Phone"
     t.datetime "created_at"
@@ -166,7 +145,7 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "shippers_tmps", force: true do |t|
-    t.integer  "ShipperID"
+    t.integer  "shipper_id"
     t.string   "CompanyName"
     t.string   "Phone"
     t.datetime "created_at"
@@ -174,7 +153,7 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "suppliers", force: true do |t|
-    t.integer  "SupplierID"
+    t.integer  "id"
     t.string   "CompanyName"
     t.string   "ContactName"
     t.string   "ContactTitle"
@@ -191,24 +170,15 @@ ActiveRecord::Schema.define(version: 20140406001703) do
   end
 
   create_table "territories", force: true do |t|
-    t.string   "TerritoryID"
+    t.string   "id"
     t.string   "TerritoryDescription"
-    t.integer  "RegionID"
+    t.integer  "region_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "us_states", force: true do |t|
-    t.integer  "StateID"
-    t.string   "StateName"
-    t.string   "StateAbbr"
-    t.string   "StateRegion"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "usstates", force: true do |t|
-    t.integer  "StateID"
+    t.integer  "id"
     t.string   "StateName"
     t.string   "StateAbbr"
     t.string   "StateRegion"
